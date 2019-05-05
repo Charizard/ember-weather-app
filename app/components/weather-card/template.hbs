@@ -1,0 +1,14 @@
+<div class="weather-card__wrapper bg-white shadow-lg h-64 p-8 w-1/2">
+  <div class="flex items-center content-center justify-center">
+    <span class="text-5xl text-blue pt-5 pr-3"><i class={{this.icon}}></i></span>
+    <span class="weather-card__current-temp">
+      <div class="text-3xl">
+        <span>{{@weatherData.name}}</span>
+        <span class="text-blue ml-3">{{@weatherData.other.temp}}°C</span>
+      </div>
+      <span class="text-grey">{{capitalize @weatherData.weather.firstObject.description}} with moderate breeze</span>
+
+    </span>
+  </div>
+  <WeatherWidget @details={{@weatherData.details}}/>
+</div>
