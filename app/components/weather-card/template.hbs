@@ -1,4 +1,4 @@
-<div class="weather-card__wrapper bg-white shadow-lg h-64 p-8 w-1/2">
+<div class="weather-card__wrapper bg-white shadow-lg min-h-64 p-8 md:w-1/2 sm:w-full md:m-0 sm:m-3">
   <div class="flex items-center content-center justify-center">
     <span class="text-5xl text-blue pt-5 pr-3"><i class={{this.icon}}></i></span>
     <span class="weather-card__current-temp">
@@ -11,4 +11,5 @@
     </span>
   </div>
   <WeatherWidget @details={{@weatherData.details}}/>
+  <MapEmbed @coord={{@weatherData.coord}}/>
 </div>
