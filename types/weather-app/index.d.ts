@@ -23,6 +23,15 @@ declare global {
     weather: [];
     name: string;
   }
+
+  interface WebIcon {
+    label: string;
+    icon: string;
+  }
+
+  interface WeatherIconConfig {
+    [key: number]: WebIcon,
+  }
 }
 
 export {};
