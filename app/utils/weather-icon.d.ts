@@ -1,10 +1,10 @@
 export default WeatherIcons;
 
-interface IWebIcon {
+interface WebIcon {
   label: string;
   icon: string;
 }
 
 declare const WeatherIcons: {
-  [key: string]: IWebIcon,
+  [key: string]: WebIcon,
 };

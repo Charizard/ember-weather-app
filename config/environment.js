@@ -25,8 +25,10 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      rapid: {
+        host: 'community-open-weather-map.p.rapidapi.com',
+        apiKey: 'a1140d9a5dmsh20caf953aa5b2d9p185a77jsnf52276e095e9'
+      }
     }
   };
 
