@@ -20,7 +20,11 @@ declare global {
     id: number;
     coord: Coordinate;
     details: LocationWeatherDetails;
-    weather: [];
+    weather: {
+      [index: number]: {
+        id: number;
+      }
+    };
     name: string;
   }
 

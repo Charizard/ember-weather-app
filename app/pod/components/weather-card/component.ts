@@ -1,7 +1,11 @@
 import Component from '@glimmer/component';
 import weatherIcons from 'weather-app/utils/weather-icon';
 
-export default class WeatherCardComponent extends Component {
+export interface WeatherCardArgs {
+  weatherData: OpenWeatherData;
+}
+
+export default class WeatherCardComponent extends Component<WeatherCardArgs> {
   get icon(): string {
     const prefix = 'wi wi-';
     const code = this.args.weatherData.weather[0].id;
