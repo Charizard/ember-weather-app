@@ -2,17 +2,9 @@ import Service from '@ember/service';
 import { tracked } from '@glimmer/tracking';
 
 export default class GeoLocationService extends Service {
-  @tracked status: string;
-  @tracked latitude: number;
-  @tracked longitude: number;
-
-  constructor() {
-    super(...arguments);
-
-    this.status = 'waiting';
-    this.latitude = 0;
-    this.longitude = 0;
-  }
+  @tracked status = 'waiting';
+  @tracked latitude = 0;
+  @tracked longitude = 0;
 
   public fetchCurrentCoordinates() {
     return new Promise((resolve: () => void, reject: () => void) => {

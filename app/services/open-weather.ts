@@ -30,13 +30,11 @@ export default class OpenWeatherService extends Service {
 
   normalizeResponse(response: any): OpenWeatherData {
     const name = `${response.name}, ${response.sys.country}`;
+    const { sunrise, sunset } = response.sys;
     const details = {
-      humidity: response.main.humidity,
-      pressure: response.main.pressure,
-      sunrise: response.sys.sunrise,
-      sunset: response.sys.sunset,
-      temp_max: response.main.temp_max,
-      temp_min: response.main.temp_min,
+      ...response.main,
+      sunrise,
+      sunset,
       wind_speed: response.wind.speed,
     };
 
