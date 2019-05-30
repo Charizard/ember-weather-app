@@ -12,7 +12,7 @@ export default class OpenWeatherService extends Service {
     return this.fetchWeather('forecast', coord);
   }
 
-  fetchWeather(type: string, coord: Coordinate): any {
+  fetchWeather(type: string, coord: Coordinate) {
     const parseJSON = (response: any) => {
       return response.json();
     };
