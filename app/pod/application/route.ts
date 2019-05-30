@@ -17,7 +17,6 @@ export default class ApplicationRoute extends Route {
   }
 
   setupController(this: ApplicationRoute, controller: ApplicationController, model: OpenWeatherData) {
-    // Call _super for default behavior
     this._super(controller, model);
 
     set(controller, 'model', model);

@@ -1,22 +1,22 @@
 <div class="flex md:flex-row sm:flex-col items-center justify-center my-3">
   <div class="weather-widget__detail flex-grow sm:my-2 text-lg">
     <i class="wi wi-humidity text-blue"></i>
-    <span class="text-grey-dark">{{@details.humidity}}</span>
+    <span class="text-grey-dark" data-test-humidity>{{@details.humidity}}</span>
   </div>
   <div class="weather-widget__detail flex-grow sm:my-2 text-lg">
     <i class="wi wi-sunrise text-blue"></i>
-    <span class="text-grey-dark">{{unix-time-stamp-to-time @details.sunrise}}</span>
+    <span class="text-grey-dark" data-test-sunrise>{{unix-time-stamp-to-time @details.sunrise}}</span>
   </div>
   <div class="weather-widget__detail flex-grow sm:my-2 text-lg">
     <i class="wi wi-sunset text-blue"></i>
-    <span class="text-grey-dark">{{unix-time-stamp-to-time @details.sunset}}</span>
+    <span class="text-grey-dark" data-test-sunset>{{unix-time-stamp-to-time @details.sunset}}</span>
   </div>
   <div class="weather-widget__detail flex-grow sm:my-2 text-lg">
     <i class="wi wi-strong-wind text-blue"></i>
-    <span class="text-grey-dark">{{@details.wind_speed}}</span>
+    <span class="text-grey-dark" data-test-wind-speed>{{@details.wind_speed}}</span>
   </div>
   <div class="weather-widget__detail flex-grow sm:my-2 text-lg">
     <i class="wi wi-barometer text-blue"></i>
-    <span class="text-grey-dark">{{@details.pressure}}</span>
+    <span class="text-grey-dark" data-test-pressure>{{@details.pressure}}</span>
   </div>
 </div>
