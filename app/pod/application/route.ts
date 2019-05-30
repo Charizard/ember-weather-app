@@ -11,7 +11,7 @@ export default class ApplicationRoute extends Route {
   @service openWeather!: OpenWeather;
 
   model() {
-    return this.geoLocation.fetchCurrentCoordinates().then((coord: { latitude: number, longitude: number }) => {
+    return this.geoLocation.fetchCurrentCoordinates().then((coord: Coordinate) => {
       return this.openWeather.fetchCurrentWeather(coord);
     });
   }
