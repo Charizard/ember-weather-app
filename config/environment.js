@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(environment) {
-  let ENV = {
+  const ENV = {
     modulePrefix: 'weather-app',
     podModulePrefix: 'weather-app/pod',
     environment,
@@ -53,7 +53,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    // This is left empty for production configs.
   }
 
   return ENV;

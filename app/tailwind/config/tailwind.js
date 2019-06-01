@@ -127,7 +127,7 @@ export default {
     visibility: ['responsive'],
     whitespace: ['responsive'],
     width: ['responsive'],
-    zIndex: ['responsive'],
+    zIndex: ['responsive']
   },
 
   /*
@@ -164,6 +164,6 @@ export default {
   options: {
     prefix: '',
     important: false,
-    separator: ':',
-  },
+    separator: ':'
+  }
 };

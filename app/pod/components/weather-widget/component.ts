@@ -1,4 +1,3 @@
 import Component from '@glimmer/component';
 
-export default class WeatherWidgetComponent extends Component {
-}
+export default class WeatherWidgetComponent extends Component {}

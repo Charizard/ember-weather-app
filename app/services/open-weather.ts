@@ -17,15 +17,21 @@ export default class OpenWeatherService extends Service {
       return response.json();
     };
 
-    return fetch(`https://${config.APP.rapid.host}/${type}?lat=${coord.latitude}&lon=${coord.longitude}&units=metric`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'X-RapidAPI-Host': config.APP.rapid.host,
-        'X-RapidAPI-Key': config.APP.rapid.apiKey,
-      },
-    }).then(parseJSON)
-    .then(this.normalizeResponse);
+    return fetch(
+      `https://${config.APP.rapid.host}/${type}?lat=${coord.latitude}&lon=${
+        coord.longitude
+      }&units=metric`,
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-RapidAPI-Host': config.APP.rapid.host,
+          'X-RapidAPI-Key': config.APP.rapid.apiKey
+        }
+      }
+    )
+      .then(parseJSON)
+      .then(this.normalizeResponse);
   }
 
   normalizeResponse(response: any): OpenWeatherData {
@@ -35,7 +41,7 @@ export default class OpenWeatherService extends Service {
       ...response.main,
       sunrise,
       sunset,
-      wind_speed: response.wind.speed,
+      wind_speed: response.wind.speed
     };
 
     return {
@@ -43,7 +49,7 @@ export default class OpenWeatherService extends Service {
       details,
       id: response.id,
       name,
-      weather: response.weather,
+      weather: response.weather
     };
   }
 }

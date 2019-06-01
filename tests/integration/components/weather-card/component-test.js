@@ -1,3 +1,5 @@
+/* eslint-disable unicorn/prevent-abbreviations */
+
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render, find } from '@ember/test-helpers';
@@ -10,9 +12,7 @@ module('Integration | Component | weather-card', function(hooks) {
     this.set('weatherData', {
       name: 'Frankfurt, DE',
       other: { temp: 20 },
-      weather: [
-        { id: 200, description: 'moderate clouds' }
-      ],
+      weather: [{ id: 200, description: 'moderate clouds' }],
       details: {},
       coord: {}
     });
