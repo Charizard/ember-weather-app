@@ -1,26 +1,16 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | location-search', function(hooks) {
   setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+  test('it displays the name of the current location', async function(assert) {
+    this.set('location', 'Frankfurt, DE');
 
-    await render(hbs`<LocationSearch />`);
+    await render(hbs`<LocationSearch @location={{location}}/>`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <LocationSearch>
-        template block text
-      </LocationSearch>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(find('input').value, this.location);
   });
 });

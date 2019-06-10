@@ -9,7 +9,7 @@ export default class WeatherCardComponent extends Component<WeatherCardArgs> {
   get icon(): string {
     const prefix = 'wi wi-';
     const code = this.args.weatherData.weather[0].id;
-    const icon = weatherIcons[code].icon;
+    const { icon } = weatherIcons[code];
 
     let iconName = '';
 

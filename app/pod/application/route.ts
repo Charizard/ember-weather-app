@@ -8,17 +8,23 @@ import ApplicationController from './controller';
 
 export default class ApplicationRoute extends Route {
   @service geoLocation!: GeoLocation;
+
   @service openWeather!: OpenWeather;
 
   model() {
-    return this.geoLocation.fetchCurrentCoordinates().then((coord: Coordinate) => {
-      return this.openWeather.fetchCurrentWeather(coord);
-    });
+    return this.geoLocation
+      .fetchCurrentCoordinates()
+      .then((coord: Coordinate) => {
+        return this.openWeather.fetchCurrentWeather(coord);
+      });
   }
 
-  setupController(this: ApplicationRoute, controller: ApplicationController, model: OpenWeatherData) {
-    // Call _super for default behavior
-    this._super(controller, model);
+  setupController(
+    this: ApplicationRoute,
+    controller: ApplicationController,
+    model: OpenWeatherData
+  ) {
+    super.setupController(controller, model);
 
     set(controller, 'model', model);
     set(controller, 'location', get(model, 'name'));
