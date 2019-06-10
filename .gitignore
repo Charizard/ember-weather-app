@@ -1,5 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+.DS_Store
+
 # compiled output
 /dist/
 /tmp/
@@ -16,6 +18,7 @@
 /npm-debug.log*
 /testem.log
 /yarn-error.log
+.netlify/
 
 # ember-try
 /.node_modules.ember-try/
