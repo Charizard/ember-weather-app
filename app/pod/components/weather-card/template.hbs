@@ -4,7 +4,7 @@
     <span class="weather-card__current-temp">
       <div class="text-3xl">
         <span data-test-location-name>{{@weatherData.name}}</span>
-        <span class="text-blue ml-3" data-test-current-temp>{{@weatherData.other.temp}}°C</span>
+        <span class="text-blue ml-3" data-test-current-temp>{{@weatherData.details.temp}}°C</span>
       </div>
       <span class="text-grey">{{capitalize @weatherData.weather.firstObject.description}} with moderate breeze</span>
 
